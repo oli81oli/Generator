@@ -1,0 +1,132 @@
+    body,
+    html {
+        padding: 5px;
+        height: 100%;
+    }
+    
+    .bg {
+        /* The image used */
+        background-image: url("band.jpg");
+        /* Full height */
+        height: 100%;
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    header {
+        display: flex;
+        justify-content: space-around;
+        margin: 10px 10px 0 10px;
+    }
+    
+    figure {
+        height: 4em;
+    }
+    
+    nav {
+        margin-right: 0.75em;
+        animation: click 2s linear;
+    }
+    
+    ul {
+        display: flex;
+        padding: 1em;
+    }
+    
+    li {
+        list-style: none;
+        padding: 5px;
+        border: 3px solid white;
+        margin: 0 10px;
+        border-radius: 3px;
+    }
+    
+    a {
+        color: white;
+        text-decoration: none;
+        font-family: cursive;
+        font-size: small;
+        transition: 0.5s;
+    }
+    
+    hr {
+        margin: 0 2px;
+        background-color: white
+    }
+    
+    .logo {
+        width: 22em;
+        border: 5px solid white;
+        border-radius: 3px;
+    }
+    
+    a:hover {
+        background-color: white;
+        color: black;
+        padding: 1em 0;
+        border-radius: 1em;
+        transition: 0.5s;
+        text-decoration: none;
+        font-family: cursive;
+    }
+    
+    @keyframes click {
+        from {
+            margin-left: 25%;
+        }
+        to {
+            margin-right: 0%;
+        }
+    }
+    
+    @media (max-width: 950px) {
+        li {
+            padding: 3px
+        }
+    }
+    
+    @media (max-width: 925px) {
+        li {
+            padding: 3px
+        }
+    }
+    
+    @media (max-width: 800px) {
+        header {
+            display: inline;
+        }
+        nav {
+            margin: 0em;
+        }
+        ul {
+            padding: 0;
+            margin-bottom: 0;
+        }
+        li {
+            padding: 2px;
+            margin: 0 5px
+        }
+        hr {
+            width: 21em;
+        }
+    }
+    
+    @media (max-width: 650px) {
+        .logo {
+            width: 21.3em
+        }
+        li {
+            padding: 1px
+        }
+        nav {
+            margin: 1em 0 0 0;
+        }
+        figure {
+            margin: 0
+        }
+        hr {
+            width: 21em;
+        }
+    }
