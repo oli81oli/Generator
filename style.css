@@ -49,6 +49,7 @@
         font-family: cursive;
         font-size: small;
         transition: 0.5s;
+        cursor: pointer
     }
     
     hr {
@@ -70,6 +71,7 @@
         transition: 0.5s;
         text-decoration: none;
         font-family: cursive;
+        cursor: pointer
     }
     
     @keyframes click {
@@ -79,6 +81,69 @@
         to {
             margin-right: 0%;
         }
+    }
+    
+    .center-tour {
+        display: flex;
+        justify-content: center;
+        margin-top: 10em;
+        animation: click 2s linear;
+    }
+    
+    .tour-style {
+        padding: 1em;
+        border: 5px solid white;
+        color: white;
+        border-radius: 3px;
+        width: 20em;
+        text-align: center;
+        font-size: 2em
+    }
+    
+    .center-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10em;
+        animation: click 2s linear;
+    }
+    
+    form {
+        padding: 1em;
+        border: 5px solid white;
+        color: white;
+        border-radius: 3px;
+    }
+    
+    .btn-primary {
+        background-color: white;
+        color: black;
+        border-color: white;
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: .25rem;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+    
+    .btn-primary:hover {
+        color: white;
+        background-color: black;
+        border-color: white;
+    }
+    
+    #alert {
+        color: white
     }
     
     @media (max-width: 950px) {
@@ -107,6 +172,11 @@
         li {
             padding: 2px;
             margin: 0 5px
+        }
+        .center-form {
+            display: flex;
+            justify-content: left;
+            align-items: center;
         }
         hr {
             width: 21em;
