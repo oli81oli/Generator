@@ -55,3 +55,95 @@
 
     window.onload = init;
 }
+
+function show_alert(sign) {
+    let city = document.getElementById('inputCity');
+
+    let email = document.getElementById('inputEmail4');
+    let okEmail = email.value;
+    let ifEmail = new RegExp("[a-zA-Z0-9_.-]+@+[a-zA-Z0-9_.-]+.+[a-zA-Z]{2,4}");
+
+    let address = document.getElementById("inputAddress");
+    let okAddress = address.value;
+    let ifAddress = new RegExp("[a-zA-Z0-9/,ºª]");
+
+    let state = document.getElementById("inputState");
+
+    let zip = document.getElementById("inputZip");
+    let okZip = zip.value;
+    let ifZip = new RegExp("[0-9]");
+
+
+    if (ifEmail.test(okEmail) && ifAddress.test(okAddress) && city.value.length > 0 && state.value.length > 0 && ifZip.test(okZip)) {
+
+        alert('It has been successfully registred')
+    } else {
+        alert('somenthing went wrong')
+    }
+}
+show_alert('alert')
+
+// Email
+function show_alert(alert) {
+    let validEmail = document.getElementById('msg-email');
+    let email = document.getElementById('inputEmail4');
+    let okEmail = email.value;
+    let ifEmail = new RegExp("[a-zA-Z0-9_.-]+@+[a-zA-Z0-9_.-]+.+[a-zA-Z]{2,4}");
+    if (ifEmail.test(okEmail)) {
+        validEmail.style.display = 'none'
+    } else {
+        validEmail.style.display = 'block';
+    }
+}
+show_alert('alert');
+
+//Address
+function show_alert(alert) {
+    let address = document.getElementById("inputAddress");
+    let validAddress = document.getElementById('msg-address');
+    let okAddress = address.value;
+    let ifAddress = new RegExp("[a-zA-Z0-9/,ºª]");
+    if (ifAddress.test(okAddress)) {
+        validAddress.style.display = 'none'
+    } else {
+        validAddress.style.display = 'block';
+    }
+}
+show_alert('alert');
+
+//City
+function show_alert(alert) {
+    let city = document.getElementById('inputCity');
+    let validCity = document.getElementById('msg-city');
+    if (city.value.length > 0) {
+        validCity.style.display = 'none';
+    } else {
+        validCity.style.display = 'block';
+    }
+}
+show_alert('alert');
+
+//State
+function show_alert(alert) {
+    let state = document.getElementById("inputState");
+    let validState = document.getElementById('msg-state')
+    if (state.value.length > 0) {
+        validState.style.display = 'none';
+    } else {
+        validState.style.display = 'block';
+    }
+}
+show_alert('alert');
+
+//Zip
+function() {
+    let zip = document.getElementById("inputZip");
+    let validZip = document.getElementById('msg-zip');
+    let okZip = zip.value;
+    let ifZip = new RegExp("[0-9]");
+    if (ifZip.test(okZip)) {
+        validZip.style.display = 'none';
+    } else {
+        validZip.style.display = 'block';
+    }
+}

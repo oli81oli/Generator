@@ -1,7 +1,7 @@
 function show_tour(id) {
     let theTour = document.getElementById(id);
 
-    if (theTour.style && theTour.style.display == 'none') {
+    if (theTour.style.display == 'none') {
         theTour.style.display = 'block';
     } else {
         theTour.style.display = 'none';
@@ -9,5 +9,6 @@ function show_tour(id) {
 }
 window.onload = function() {
     show_tour('tour');
-    muestra_oculta('contenido');
+    show_form('form');
+
 }

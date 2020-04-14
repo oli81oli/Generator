@@ -1,6 +1,5 @@
     body,
     html {
-        padding: 5px;
         height: 100%;
     }
     
@@ -23,6 +22,7 @@
     
     figure {
         height: 4em;
+        margin: 0
     }
     
     nav {
@@ -33,6 +33,7 @@
     ul {
         display: flex;
         padding: 1em;
+        margin: 0
     }
     
     li {
@@ -66,12 +67,12 @@
     a:hover {
         background-color: white;
         color: black;
-        padding: 1em 0;
-        border-radius: 1em;
+        padding: 1px 0;
+        border-radius: 3px;
         transition: 0.5s;
         text-decoration: none;
         font-family: cursive;
-        cursor: pointer
+        cursor: pointer;
     }
     
     @keyframes click {
@@ -115,6 +116,36 @@
         border-radius: 3px;
     }
     
+    #msg-email {
+        color: rgb(146, 45, 45);
+        font-size: small;
+        display: none;
+    }
+    
+    #msg-address {
+        color: rgb(146, 45, 45);
+        font-size: small;
+        display: none;
+    }
+    
+    #msg-city {
+        color: rgb(146, 45, 45);
+        font-size: small;
+        display: none;
+    }
+    
+    #msg-state {
+        color: rgb(146, 45, 45);
+        font-size: small;
+        display: none;
+    }
+    
+    #msg-zip {
+        color: rgb(146, 45, 45);
+        font-size: small;
+        display: none;
+    }
+    
     .btn-primary {
         background-color: white;
         color: black;
@@ -143,7 +174,7 @@
     }
     
     #alert {
-        color: white
+        color: white;
     }
     
     @media (max-width: 950px) {
@@ -161,13 +192,16 @@
     @media (max-width: 800px) {
         header {
             display: inline;
+            margin: 0;
+            text-align: center;
         }
         nav {
-            margin: 0em;
+            margin: 0.5em;
         }
         ul {
             padding: 0;
             margin-bottom: 0;
+            justify-content: center;
         }
         li {
             padding: 2px;
@@ -179,7 +213,7 @@
             align-items: center;
         }
         hr {
-            width: 21em;
+            margin-top: 0.5em;
         }
     }
     
@@ -190,13 +224,29 @@
         li {
             padding: 1px
         }
-        nav {
-            margin: 1em 0 0 0;
-        }
         figure {
-            margin: 0
+            margin: 0;
+            width: auto
         }
         hr {
-            width: 21em;
+            margin-top: 0
+        }
+    }
+    
+    @media (max-width:359px) {
+        .logo {
+            width: 90%
+        }
+        ul {
+            justify-content: center;
+        }
+        li {
+            margin: 0
+        }
+    }
+    
+    @media (max-width:340px) {
+        ul {
+            justify-content: center;
         }
     }
