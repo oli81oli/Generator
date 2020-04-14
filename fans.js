@@ -80,7 +80,7 @@ function show_alert(sign) {
         }
     };
     if (ifEmail.test(okEmail) && ifAddress.test(okAddress) && city.value.length > 0 && state.value.length > 0 && ifZip.test(okZip)) {
-        alert('yes');
+        alert('You have been registred successfully');
         vEmail.style.display = 'none';
         vAddress.style.display = 'none';
         vCity.style.display = 'none';
