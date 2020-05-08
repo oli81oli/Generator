@@ -1,18 +1,20 @@
 function show_form(fans) {
     let showForm = document.getElementById(fans);
+    let perfect = document.getElementById('perfect')
 
     if (showForm.style.display == 'none') {
         showForm.style.display = 'block';
     } else {
         showForm.style.display = 'none';
+        perfect.style.display = 'none'
     }
 }
 window.onload = function() {
     show_form('form');
-    show_tour('tour');
+    // show_tour('tour');
 }
 
-function show_alert(sign) {
+function show_alert() {
     let email = document.getElementById('inputEmail4');
     let okEmail = email.value;
     let ifEmail = new RegExp("[a-zA-Z0-9_.-]+@+[a-zA-Z0-9_.-]+.+[a-zA-Z]{2,4}");
@@ -29,6 +31,7 @@ function show_alert(sign) {
     let okZip = zip.value;
     let ifZip = new RegExp("[0-9]");
     let vZip = document.getElementById('msg-zip');
+
 
     let validEmail = function() {
         if (ifEmail.test(okEmail)) {
@@ -79,20 +82,23 @@ function show_alert(sign) {
             return false;
         }
     };
+    let perfect = document.getElementById('perfect')
     if (ifEmail.test(okEmail) && ifAddress.test(okAddress) && city.value.length > 0 && state.value.length > 0 && ifZip.test(okZip)) {
-        alert('You have been registred successfully');
-        vEmail.style.display = 'none';
-        vAddress.style.display = 'none';
-        vCity.style.display = 'none';
-        vState.style.display = 'none';
-        vZip.style.display = 'none';
-
+        // alert('You have been registred successfully');
+        perfect.style.display = 'block';
+        validEmail();
+        validAddress();
+        validCity();
+        validState();
+        validZip();
     } else {
+        perfect.style.display = 'none';
         validEmail();
         validAddress();
         validCity();
         validState();
         validZip();
     }
+
 }
-show_alert('alert')
+show_alert('alert');

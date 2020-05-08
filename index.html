@@ -8,83 +8,89 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./style.css">
     <script src="./fans.js" language="javascript" type="text/javascript"></script>
-    <script src="./tours.js" language="javascript" type="text/javascript"></script>
+    <script src="./beers.js" language="javascript" type="text/javascript"></script>
 </head>
 
 <body class="bg">
+
     <header>
         <figure>
-            <img class="logo" src="logo.png " alt=" logo">
+            <img class="logo" src="logo.png" alt="logo">
         </figure>
 
         <nav>
             <ul>
-                <li><a href=" https://generatorband.bandcamp.com/releases " target="_blank">Records</a></li>
-                <li><a href="#" onClick="show_tour('tour')">Tour</a></li>
-                <li><a href="#">Photos</a></li>
-                <li><a href="#">Media</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#" onClick="show_form('form')" title=" ">Fans</a></li>
+                <li><a href="https://generatorband.bandcamp.com/releases" target="_blank">Records</a></li>
+                <li><a href="#" class="tours">Tour</a></li>
+                <li><a href=" # ">Photos</a></li>
+                <li><a href="# ">Media</a></li>
+                <li><a href="# ">Contact</a></li>
+                <li><a href="# " onClick="show_form('form')" title=" ">Fans</a></li>
+                <li>
+                    <a href="# " onClick="makeRequest( 'https://api.punkapi.com/v2/beers/random') " id="press_beer "> Beers</a>
+                </li>
             </ul>
         </nav>
-
-
-
-
     </header>
     <hr>
-    <div></div>
+    <div><img id="show_beer ">
+    </div>
 
     <div id='tour'>
-        <div class="center-tour">
-            <div class="tour-style">...Sorry, We don't have shows...</div>
+        <div class="center-tour ">
+            <div id="tour_style">...Sorry, We don't have shows...</div>
+        </div>
+    </div>
+    <div id="perfect">perfect</div>
+    <div id='form'>
+        <div class="center-form ">
+            <form id="alert">
+                <div class="form-group ">
+                    <label for=" inputEmail4 ">Email</label>
+                    <input type="email " class="form-control " id="inputEmail4">
+                    <div id="msg-email">incorrect format</div>
+                </div>
+
+
+                <div class="form-group ">
+                    <label for="inputAddress ">Address</label>
+                    <input type="text " class="form-control " id="inputAddress" placeholder="1234 Main St ">
+                    <div id="msg-address">incorrect format</div>
+                </div>
+
+                <div class="form-row ">
+                    <div class="form-group col-md-6 ">
+                        <label for="inputCity ">City</label>
+                        <input type="text " class="form-control " id="inputCity">
+                        <div id="msg-city">incorrect format</div>
+                    </div>
+
+                    <div class="form-group col-md-4 ">
+                        <label for="inputState ">State</label>
+                        <input id="inputState" class="form-control ">
+                        <div id="msg-state">incorrect format</div>
+
+                    </div>
+
+                    <div class="form-group col-md- ">
+                        <label for="inputZip ">Zip</label>
+                        <input type="number " class="form-control " id="inputZip">
+                        <div id="msg-zip">incorrect format</div>
+                    </div>
+                </div>
+
+                <button id="send" onClick="show_alert('alert')" type="submit" class=" btn-primary">Sign in</button>
+            </form>
         </div>
     </div>
 
-    <div id='form'>
-        <div class="center-form">
-            <form id="alert">
-                <div class="form-group">
-                    <label for=" inputEmail4 ">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4">
-                    <div id="msg-email">incorrect format</div>
 
+    <footer></footer>
+    <script src="./tours.js" language="javascript" type="text/javascript"></script>
 
-                    <div class="form-group">
-                        <label for="inputAddress">Address</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                        <div id="msg-address">incorrect format</div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputCity ">City</label>
-                            <input type="text" class="form-control" id="inputCity">
-                            <div id="msg-city">incorrect format</div>
-                        </div>
-
-                        <div class="form-group col-md-4">
-                            <label for="inputState">State</label>
-                            <input id="inputState" class="form-control">
-                            <div id="msg-state">incorrect format</div>
-
-                        </div>
-
-                        <div class="form-group col-md- ">
-                            <label for="inputZip">Zip</label>
-                            <input type="number" class="form-control" id="inputZip">
-                            <div id="msg-zip">incorrect format</div>
-                        </div>
-                    </div>
-
-                    <button id="send" onClick="show_alert('alert')" type="submit" class=" btn-primary">Sign in</button>
-            </form>
-            </div>
-        </div>
-
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
 </body>
 
 </html>

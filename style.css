@@ -1,252 +1,265 @@
-    body,
-    html {
-        height: 100%;
+body,
+html {
+    margin: 0;
+    height: 100%;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("band.jpg");
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 10px 0 10px;
+}
+
+figure {
+    height: 4em;
+    margin: 0
+}
+
+nav {
+    margin-right: 0.75em;
+    animation: click 2s linear;
+}
+
+ul {
+    display: flex;
+    padding: 1em;
+    margin: 0
+}
+
+li {
+    list-style: none;
+    padding: 5px;
+    border: 3px solid white;
+    margin: 0 10px;
+    border-radius: 3px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-family: cursive;
+    font-size: small;
+    transition: 0.5s;
+    cursor: pointer
+}
+
+hr {
+    margin: 0 2px;
+    background-color: white
+}
+
+.logo {
+    width: 22em;
+    border: 5px solid white;
+    border-radius: 3px;
+}
+
+a:hover {
+    background-color: white;
+    color: black;
+    padding: 1px 0;
+    border-radius: 3px;
+    transition: 0.5s;
+    text-decoration: none;
+    font-family: cursive;
+    cursor: pointer;
+}
+
+@keyframes click {
+    from {
+        margin-left: 25%;
     }
-    
-    .bg {
-        /* The image used */
-        background-image: url("band.jpg");
-        /* Full height */
-        height: 100%;
-        /* Center and scale the image nicely */
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+    to {
+        margin-right: 0%;
     }
-    
-    header {
-        display: flex;
-        justify-content: space-around;
-        margin: 10px 10px 0 10px;
-    }
-    
-    figure {
-        height: 4em;
-        margin: 0
-    }
-    
-    nav {
-        margin-right: 0.75em;
-        animation: click 2s linear;
-    }
-    
-    ul {
-        display: flex;
-        padding: 1em;
-        margin: 0
-    }
-    
+}
+
+.center-tour {
+    display: flex;
+    justify-content: center;
+    margin-top: 10em;
+    animation: click 2s linear;
+}
+
+#tour_style {
+    padding: 1em;
+    border: 5px solid white;
+    color: white;
+    border-radius: 3px;
+    width: 20em;
+    text-align: center;
+    font-size: 2em;
+    display: none
+}
+
+.center-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10em;
+    animation: click 2s linear;
+}
+
+form {
+    padding: 1em;
+    border: 5px solid white;
+    color: white;
+    border-radius: 3px;
+}
+
+#msg-email {
+    color: rgb(146, 45, 45);
+    font-size: small;
+    display: none;
+}
+
+#msg-address {
+    color: rgb(146, 45, 45);
+    font-size: small;
+    display: none;
+}
+
+#msg-city {
+    color: rgb(146, 45, 45);
+    font-size: small;
+    display: none;
+}
+
+#msg-state {
+    color: rgb(146, 45, 45);
+    font-size: small;
+    display: none;
+}
+
+#msg-zip {
+    color: rgb(146, 45, 45);
+    font-size: small;
+    display: none;
+}
+
+.btn-primary {
+    background-color: white;
+    color: black;
+    border-color: white;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+#show_beer {
+    width: 4em;
+    margin: 5em 40em;
+}
+
+.btn-primary:hover {
+    color: white;
+    background-color: black;
+    border-color: white;
+}
+
+#alert {
+    color: white
+}
+
+#perfect {
+    display: none;
+    color: white;
+    text-align: center;
+    font-size: 2em
+}
+
+@media (max-width: 950px) {
     li {
-        list-style: none;
-        padding: 5px;
-        border: 3px solid white;
-        margin: 0 10px;
-        border-radius: 3px;
+        padding: 3px
     }
-    
-    a {
-        color: white;
-        text-decoration: none;
-        font-family: cursive;
-        font-size: small;
-        transition: 0.5s;
-        cursor: pointer
+}
+
+@media (max-width: 925px) {
+    li {
+        padding: 3px
     }
-    
-    hr {
-        margin: 0 2px;
-        background-color: white
-    }
-    
-    .logo {
-        width: 22em;
-        border: 5px solid white;
-        border-radius: 3px;
-    }
-    
-    a:hover {
-        background-color: white;
-        color: black;
-        padding: 1px 0;
-        border-radius: 3px;
-        transition: 0.5s;
-        text-decoration: none;
-        font-family: cursive;
-        cursor: pointer;
-    }
-    
-    @keyframes click {
-        from {
-            margin-left: 25%;
-        }
-        to {
-            margin-right: 0%;
-        }
-    }
-    
-    .center-tour {
-        display: flex;
-        justify-content: center;
-        margin-top: 10em;
-        animation: click 2s linear;
-    }
-    
-    .tour-style {
-        padding: 1em;
-        border: 5px solid white;
-        color: white;
-        border-radius: 3px;
-        width: 20em;
+}
+
+@media (max-width: 800px) {
+    header {
+        display: inline;
+        margin: 0;
         text-align: center;
-        font-size: 2em
     }
-    
+    nav {
+        margin: 0.5em;
+    }
+    ul {
+        padding: 0;
+        margin-bottom: 0;
+        justify-content: center;
+    }
+    li {
+        padding: 2px;
+        margin: 0 5px
+    }
     .center-form {
         display: flex;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
-        margin-top: 10em;
-        animation: click 2s linear;
     }
-    
-    form {
-        padding: 1em;
-        border: 5px solid white;
-        color: white;
-        border-radius: 3px;
+    hr {
+        margin-top: 0.5em;
     }
-    
-    #msg-email {
-        color: rgb(146, 45, 45);
-        font-size: small;
-        display: none;
+}
+
+@media (max-width: 650px) {
+    .logo {
+        width: 21.3em
     }
-    
-    #msg-address {
-        color: rgb(146, 45, 45);
-        font-size: small;
-        display: none;
+    li {
+        padding: 1px
     }
-    
-    #msg-city {
-        color: rgb(146, 45, 45);
-        font-size: small;
-        display: none;
+    figure {
+        margin: 0;
+        width: auto
     }
-    
-    #msg-state {
-        color: rgb(146, 45, 45);
-        font-size: small;
-        display: none;
+    hr {
+        margin-top: 0
     }
-    
-    #msg-zip {
-        color: rgb(146, 45, 45);
-        font-size: small;
-        display: none;
+}
+
+@media (max-width:359px) {
+    .logo {
+        width: 90%
     }
-    
-    .btn-primary {
-        background-color: white;
-        color: black;
-        border-color: white;
-        display: inline-block;
-        font-weight: 400;
-        text-align: center;
-        vertical-align: middle;
-        cursor: pointer;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        border: 1px solid transparent;
-        padding: .375rem .75rem;
-        font-size: 1rem;
-        line-height: 1.5;
-        border-radius: .25rem;
-        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    ul {
+        justify-content: center;
     }
-    
-    .btn-primary:hover {
-        color: white;
-        background-color: black;
-        border-color: white;
+    li {
+        margin: 0
     }
-    
-    #alert {
-        color: white;
+}
+
+@media (max-width:340px) {
+    ul {
+        justify-content: center;
     }
-    
-    @media (max-width: 950px) {
-        li {
-            padding: 3px
-        }
-    }
-    
-    @media (max-width: 925px) {
-        li {
-            padding: 3px
-        }
-    }
-    
-    @media (max-width: 800px) {
-        header {
-            display: inline;
-            margin: 0;
-            text-align: center;
-        }
-        nav {
-            margin: 0.5em;
-        }
-        ul {
-            padding: 0;
-            margin-bottom: 0;
-            justify-content: center;
-        }
-        li {
-            padding: 2px;
-            margin: 0 5px
-        }
-        .center-form {
-            display: flex;
-            justify-content: left;
-            align-items: center;
-        }
-        hr {
-            margin-top: 0.5em;
-        }
-    }
-    
-    @media (max-width: 650px) {
-        .logo {
-            width: 21.3em
-        }
-        li {
-            padding: 1px
-        }
-        figure {
-            margin: 0;
-            width: auto
-        }
-        hr {
-            margin-top: 0
-        }
-    }
-    
-    @media (max-width:359px) {
-        .logo {
-            width: 90%
-        }
-        ul {
-            justify-content: center;
-        }
-        li {
-            margin: 0
-        }
-    }
-    
-    @media (max-width:340px) {
-        ul {
-            justify-content: center;
-        }
-    }
+}
