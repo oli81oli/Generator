@@ -1,20 +1,13 @@
-let tours = document.querySelector('.tours');
-tours.addEventListener('click', function() {
-    let tour_style = document.getElementById('tour_style');
-    if (tour_style.style.display == 'none') {
-        tour_style.style.display = 'block';
-    } else {
-        tour_style.style.display = 'none';
-    }
-});
-
-
-
-
-
-
-
-
+let tours = document.querySelector(".tours");
+let magic = function () {
+  let tour_style = document.getElementById("tour_style");
+  if (tour_style.style.display == "none") {
+    tour_style.style.display = "block";
+  } else {
+    tour_style.style.display = "none";
+  }
+};
+tours.addEventListener("click", magic);
 
 // function show_tour(id) {
 //     let theTour = document.getElementById(id);
