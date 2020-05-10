@@ -102,6 +102,15 @@ a:hover {
   display: none;
 }
 
+@keyframes press {
+  from {
+    display: none;
+  }
+  to {
+    display: block;
+  }
+}
+
 .center-form {
   display: flex;
   justify-content: center;
@@ -176,6 +185,7 @@ a:hover {
 #show_beer {
   width: 4em;
   margin: 5em 40em;
+  display: none;
 }
 
 .btn_primary:hover {

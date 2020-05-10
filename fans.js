@@ -1,24 +1,13 @@
-// function show_form(fans) {
-//   let showForm = document.getElementById(fans);
-//   let perfect = document.getElementById("perfect");
-
-//   if (showForm.style.display == "none") {
-//     showForm.style.display = "block";
-//   } else {
-//     showForm.style.display = "none";
-//     perfect.style.display = "none";
-//   }
-// }
-
 let fans = document.querySelector(".fans");
 fans.addEventListener("click", function () {
     let form = document.getElementById("form");
     let perfect = document.getElementById("perfect");
-    if (form.style.display == "none") {
-        form.style.display = "block";
+    if (form.style.display == 'block') {
+        form.style.display = 'none';
+        perfect.style.display = 'none'
     } else {
-        form.style.display = "none";
-        perfect.style.display = "none";
+        form.style.display = 'block';
+    
     }
 });
 
@@ -91,7 +80,7 @@ signIn.addEventListener("click", function () {
         }
     };
     let perfect = document.getElementById("perfect");
-    if (ifEmail.test(okEmail) && ifAddress.test(okAddress) && city.value.length > 0 && state.value.length > 0 && ifZip.test(okZip) && perfect.style.display == 'none') {
+    if (ifEmail.test(okEmail) && ifAddress.test(okAddress) && city.value.length > 0 && state.value.length > 0 && ifZip.test(okZip) ) {
         // alert('You have been registred successfully');
         perfect.style.display = "block";
         validEmail();

@@ -1,4 +1,6 @@
-let http_request = false;
+let one_beer=document.querySelector('.one_beer');
+one_beer.addEventListener('click', makeRequest('https://api.punkapi.com/v2/beers/random'))
+// let http_request = false;
 
 function makeRequest(url) {
     let http_request = false;
@@ -44,5 +46,11 @@ function makeRequest(url) {
 
 
 }
+
+
+
+
+
+
 
 // makeRequest('https://api.punkapi.com/v2/beers/random')

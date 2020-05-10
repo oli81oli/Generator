@@ -1,13 +1,24 @@
+// console.log(clickTour)
 let tours = document.querySelector(".tours");
-let magic = function () {
+let clickTour = function () {
   let tour_style = document.getElementById("tour_style");
-  if (tour_style.style.display == "none") {
-    tour_style.style.display = "block";
+  if (tour_style.style.display == 'block') {
+    tour_style.style.display = 'none';
+
   } else {
-    tour_style.style.display = "none";
+    tour_style.style.display = 'block';
+
   }
 };
-tours.addEventListener("click", magic);
+tours.addEventListener("click", () => {
+  setTimeout(clickTour, 3000)
+});
+
+
+
+
+
+// setTimeout(clickTour, 3000)
 
 // function show_tour(id) {
 //     let theTour = document.getElementById(id);
